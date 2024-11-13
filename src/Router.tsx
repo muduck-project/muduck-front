@@ -10,6 +10,7 @@ import { Musical } from "./pages/musical/Musical";
 import { Actor } from "./pages/actor/Actor";
 import { Notice } from "./pages/notice/Notice";
 import { SignIn } from "./pages/sign/SignIn";
+import { SignUp } from "./pages/sign/SignUp";
 
 export const Router = () => {
   return (
@@ -18,6 +19,7 @@ export const Router = () => {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.signIn} element={<SignIn />} />
+        <Route path={routes.signUp} element={<SignUp />} />
         <Route path={routes.musical} element={<Musical />} />
         <Route path={routes.actor} element={<Actor />} />
         <Route path={routes.notice} element={<Notice />} />

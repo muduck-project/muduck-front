@@ -30,6 +30,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
 `;
 
 const Input = styled.input`
@@ -76,6 +77,11 @@ const Notice = styled.ul`
   li {
     margin: 0 10px;
   }
+
+  p {
+    font-weight: 700;
+    color: ${colors.point};
+  }
 `;
 
 interface FormInputs {
@@ -84,7 +90,7 @@ interface FormInputs {
   name: string;
 }
 
-export const SignIn = () => {
+export const SignUp = () => {
   const navigate = useNavigate();
   const [loginText, setLoginText] = useState<string>("");
 
@@ -111,8 +117,7 @@ export const SignIn = () => {
   return (
     <Container>
       <LogInBox>
-        <Text>로그인</Text>
-        <SubText>로그인하시고 뮤지컬 정보를 손쉽게 받아보세요.</SubText>
+        <Text>회원가입</Text>
         <Form onSubmit={handleSubmit(loginHandler)}>
           <Input
             {...register("username", {
@@ -141,13 +146,11 @@ export const SignIn = () => {
           <Button type="submit">로그인</Button>
           <SignText>{loginText}</SignText>
           <Notice>
-            <li>아이디 찾기</li>
-            <li>I</li>
-            <li>비밀번호 찾기</li>
-            <li>I</li>
-            <li>
-              <Link to={routes.signUp}>회원가입</Link>
-            </li>
+            이미 회원이시라면? &nbsp;
+            <Link to={routes.signIn}>
+              <p>로그인</p>
+            </Link>
+            &nbsp;하세요
           </Notice>
         </Form>
       </LogInBox>
