@@ -16,6 +16,7 @@ const Container = styled.div`
 `;
 
 const ConWrap = styled.div`
+  margin: 0 auto;
   width: 100%;
   display: flex;
   justify-content: space-between;

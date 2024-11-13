@@ -33,6 +33,10 @@ body {
     word-break : keep-all;
 }
 
+ul, li {
+  list-style: none;
+}
+
 a {
     text-decoration: none;
     color: ${colors.mainColor};
